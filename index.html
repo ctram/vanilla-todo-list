@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vanilla JS App</title>
+  <link rel="stylesheet" href="./styles/base.css" />
+  <script>
+    console.log('top ran');
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        console.log('DOM fully loaded and parsed');
+    });
+  </script>
+  <script src="./scripts/base.js" defer></script>
+  <script src="./scripts/todo-list.js" defer></script>
+</head>
+
+<body>
+  <h1>Todo List</h1>
+
+  <form onsubmit="addTodoItem(event)">
+    <label>
+      Add Todo Item
+    </label>
+    <input type="text" id="input-todo-item" required />
+    <button type="submit">
+      Add Todo
+    </button>
+  </form>
+
+  <div>
+    <select onchange="changeFilter(event)" name="todo-item-filter">
+      <option value="completed">completed</option>
+      <option value="incompleted">incompleted</option>
+      <option value="all" selected>all</option>
+    </select>
+  </div>
+
+  <div id="todo-list-hook" />
+</body>
+</html>

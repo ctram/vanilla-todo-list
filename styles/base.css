@@ -1,0 +1,11 @@
+.text-center {
+  text-align: center;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
